@@ -17,4 +17,9 @@ class TenantService
     {
         return $this->repository->getAllTenants();
     }
+
+    public function getTenantByUuid(string $uuid)
+    {
+        return $this->repository->getTenantByUuid($uuid);
+    }
 }
