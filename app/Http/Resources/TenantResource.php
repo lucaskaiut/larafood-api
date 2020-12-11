@@ -20,7 +20,7 @@ class TenantResource extends JsonResource
             'uuid' => $this->uuid,
             'url' => $this->url,
             'email' => $this->email,
-            'logo' => $this->logo ? "http://larafood.com/storage/{$this->logo}" : '',
+            'logo' => $this->logo ? config('application.app_url') . "/storage/{$this->logo}" : '',
             'date_created' => Carbon::parse($this->created_at)->format('d/m/Y')
         ];
     }
