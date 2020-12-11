@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/tenants/category', 'Api\CategoryController@show');
+Route::get('/tenants/categories', 'Api\CategoryController@getCategoriesByTenant');
+
 Route::get('/tenants', 'Api\TenantController@index');
-Route::get('/tenants/{uuid}', 'Api\TenantController@show');
+Route::get('/tenant/{uuid}', 'Api\TenantController@show');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
