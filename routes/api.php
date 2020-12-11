@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/tenants/tables', 'Api\TableController@getTablesByTenantUuid');
+Route::get('/tenants/table', 'Api\TableController@show');
+
 Route::get('/tenants/category', 'Api\CategoryController@show');
 Route::get('/tenants/categories', 'Api\CategoryController@getCategoriesByTenant');
 
