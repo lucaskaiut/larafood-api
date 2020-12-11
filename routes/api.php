@@ -14,14 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/tenants/tables', 'Api\TableController@getTablesByTenantUuid');
-Route::get('/tenants/table', 'Api\TableController@show');
+Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function(){
+    Route::any('/tenants/products', 'ProductController@getProductsByTenantUuid');
+    Route::get('/tenants/product', 'ProductController@show');
 
-Route::get('/tenants/category', 'Api\CategoryController@show');
-Route::get('/tenants/categories', 'Api\CategoryController@getCategoriesByTenant');
+    Route::get('/tenants/tables', 'TableController@getTablesByTenantUuid');
+    Route::get('/tenants/table', 'TableController@show');
 
-Route::get('/tenants', 'Api\TenantController@index');
-Route::get('/tenant/{uuid}', 'Api\TenantController@show');
+    Route::get('/tenants/category', 'CategoryController@show');
+    Route::get('/tenants/categories', 'CategoryController@getCategoriesByTenant');
+
+    Route::get('/tenants', 'TenantController@index');
+    Route::get('/tenant/{uuid}', 'TenantController@show');
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
