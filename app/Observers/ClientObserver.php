@@ -17,15 +17,4 @@ class ClientObserver
     {
         $client->uuid = Str::uuid();
     }
-
-    /**
-     * Handle the client "updating" event.
-     *
-     * @param  \App\Models\Client  $client
-     * @return void
-     */
-    public function updating(Client $client)
-    {
-        $client->uuid = Str::uuid();
-    }
 }
