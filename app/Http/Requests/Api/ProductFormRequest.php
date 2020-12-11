@@ -24,9 +24,9 @@ class ProductFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'url' => [
+            'uuid' => [
                 'required',
-                'exists:products,url'
+                'exists:products,uuid'
             ]
         ];
     }

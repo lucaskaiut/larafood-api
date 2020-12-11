@@ -24,9 +24,9 @@ class CategoryFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'url' => [
+            'uuid' => [
                 'required',
-                'exists:categories,url'
+                'exists:categories,uuid'
             ]
         ];
     }

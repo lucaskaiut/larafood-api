@@ -28,9 +28,9 @@ class CategoryRepository implements CategoryRepositoryInterface
         return $this->entity->where('tenant_id', $tenantId)->get();
     }
 
-    public function getCategoryByUrl(string $url)
+    public function getCategoryByUuid(string $uuid)
     {
-        return $this->entity->where('url', $url)->get();
+        return $this->entity->where('uuid', $uuid)->get();
     }
 
 }

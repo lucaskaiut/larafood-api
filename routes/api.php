@@ -34,7 +34,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function(){
     Route::get('/category', 'CategoryController@show');
 
     Route::get('/tenants', 'TenantController@index');
-    Route::get('/tenant/{uuid}', 'TenantController@show');
+    Route::get('/tenant', 'TenantController@show');
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

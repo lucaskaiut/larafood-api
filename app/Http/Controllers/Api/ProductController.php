@@ -27,8 +27,8 @@ class ProductController extends Controller
 
     public function show(ProductFormRequest $request)
     {
-        $product = $this->service->getProductByUrl($request->url);
+        $product = $this->service->getProductByUuid($request->uuid);
 
-        return new ProductResource($product);
+        return ProductResource::collection($product);
     }
 }

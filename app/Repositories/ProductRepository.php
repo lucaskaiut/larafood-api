@@ -31,9 +31,9 @@ class ProductRepository implements ProductRepositoryInterface
         return $products;
     }
 
-    public function getProductByUrl(string $url)
+    public function getProductByUuid(string $uuid)
     {
-        $product = $this->entity->where('url', $url)->get();
+        $product = $this->entity->where('uuid', $uuid)->get();
 
         return $product;
     }

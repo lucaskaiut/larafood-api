@@ -23,8 +23,8 @@ class TableRepository implements TableRepositoryInterface
             ->get();
     }
 
-    public function getTableById(int $id)
+    public function getTableByUuid(string $uuid)
     {
-        return $this->entity->find($id);
+        return $this->entity->where('uuid', $uuid)->get();
     }
 }

@@ -28,8 +28,8 @@ class TableController extends Controller
 
     public function show(TableFormRequest $request)
     {
-        $table = $this->tableService->getTableById($request->table_id);
+        $table = $this->tableService->getTableByUuid($request->uuid);
 
-        return new TableResource($table);
+        return TableResource::collection($table);
     }
 }

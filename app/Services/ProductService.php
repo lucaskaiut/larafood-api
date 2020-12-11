@@ -20,9 +20,9 @@ class ProductService
         return $products;
     }
 
-    public function getProductByUrl(string $url)
+    public function getProductByUuid(string $uuid)
     {
-        $product = $this->repository->getProductByUrl($url);
+        $product = $this->repository->getProductByUuid($uuid);
 
         return $product;
     }

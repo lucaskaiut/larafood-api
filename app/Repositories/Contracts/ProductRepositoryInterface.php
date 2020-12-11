@@ -8,5 +8,5 @@ interface ProductRepositoryInterface
 {
     public function getProductsByTenantUuid(string $uuid, array $categories);
 
-    public function getProductByUrl(string $url);
+    public function getProductByUuid(string $uuid);
 }
