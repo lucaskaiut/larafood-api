@@ -15,14 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function(){
+    Route::post('/client/create', 'Auth\RegisterController@store');
+
     Route::any('/tenants/products', 'ProductController@getProductsByTenantUuid');
-    Route::get('/tenants/product', 'ProductController@show');
+    Route::get('/product', 'ProductController@show');
 
     Route::get('/tenants/tables', 'TableController@getTablesByTenantUuid');
-    Route::get('/tenants/table', 'TableController@show');
+    Route::get('/table', 'TableController@show');
 
-    Route::get('/tenants/category', 'CategoryController@show');
     Route::get('/tenants/categories', 'CategoryController@getCategoriesByTenant');
+    Route::get('/category', 'CategoryController@show');
 
     Route::get('/tenants', 'TenantController@index');
     Route::get('/tenant/{uuid}', 'TenantController@show');
