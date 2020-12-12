@@ -25,6 +25,6 @@ class TableRepository implements TableRepositoryInterface
 
     public function getTableByUuid(string $uuid)
     {
-        return $this->entity->where('uuid', $uuid)->get();
+        return $this->entity->where('uuid', $uuid)->first();
     }
 }

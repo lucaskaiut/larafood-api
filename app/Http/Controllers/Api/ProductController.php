@@ -29,6 +29,6 @@ class ProductController extends Controller
     {
         $product = $this->service->getProductByUuid($request->uuid);
 
-        return ProductResource::collection($product);
+        return new ProductResource($product);
     }
 }

@@ -33,7 +33,7 @@ class ProductRepository implements ProductRepositoryInterface
 
     public function getProductByUuid(string $uuid)
     {
-        $product = $this->entity->where('uuid', $uuid)->get();
+        $product = $this->entity->where('uuid', $uuid)->first();
 
         return $product;
     }

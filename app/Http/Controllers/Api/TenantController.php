@@ -31,6 +31,6 @@ class TenantController extends Controller
         if(!$tenant = $this->tenantService->getTenantByUuid($request->company_token))
             return response()->json(['message' => 'Not Found'], 404);
 
-        return TenantResource::collection($tenant);
+        return new TenantResource($tenant);
     }
 }
