@@ -30,6 +30,6 @@ class TableController extends Controller
     {
         $table = $this->tableService->getTableByUuid($request->uuid);
 
-        return TableResource::collection($table);
+        return new TableResource($table);
     }
 }

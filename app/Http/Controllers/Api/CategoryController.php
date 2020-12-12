@@ -27,6 +27,6 @@ class CategoryController extends Controller
 
     public function show(CategoryFormRequest $request)
     {
-        return CategoryResource::collection($this->categoryService->getCategoryByUuid($request->uuid));
+        return new CategoryResource($this->categoryService->getCategoryByUuid($request->uuid));
     }
 }

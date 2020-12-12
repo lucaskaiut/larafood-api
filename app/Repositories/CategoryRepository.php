@@ -30,7 +30,7 @@ class CategoryRepository implements CategoryRepositoryInterface
 
     public function getCategoryByUuid(string $uuid)
     {
-        return $this->entity->where('uuid', $uuid)->get();
+        return $this->entity->where('uuid', $uuid)->first();
     }
 
 }

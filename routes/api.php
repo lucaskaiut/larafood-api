@@ -16,10 +16,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function(){
 
-        Route::group(['namespace' => 'Auth', 'middleware' => 'auth:sanctum'], function(){
-            Route::post('/logout', 'AuthClientController@logout');
-            Route::post('/me', 'AuthClientController@me');
-         });
+    Route::group(['namespace' => 'Auth', 'middleware' => 'auth:sanctum'], function(){
+        Route::post('/logout', 'AuthClientController@logout');
+        Route::post('/me', 'AuthClientController@me');
+    });
+
+    Route::group(['middleware' => 'auth:sanctum'], function(){
+        Route::post('/order/evaluation/create', 'OrderEvaluationController@store');
+
+        Route::post('/auth/order/create', 'OrderController@store');
+        Route::get('/auth/orders', 'OrderController@getClientAuthenticatedOrders');
+    });
+
+    Route::get('/order', 'OrderController@show');
+    Route::post('/order/create', 'OrderController@store');
 
     Route::post('/sanctum/token', 'Auth\AuthClientController@auth');
     Route::post('/client/create', 'Auth\RegisterController@store');
