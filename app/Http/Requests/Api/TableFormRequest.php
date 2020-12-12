@@ -24,9 +24,9 @@ class TableFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'table_id' => [
+            'uuid' => [
                 'required',
-                'exists:tables,id'
+                'exists:tables,uuid'
             ]
         ];
     }

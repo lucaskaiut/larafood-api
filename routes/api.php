@@ -14,14 +14,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/tenants/tables', 'Api\TableController@getTablesByTenantUuid');
-Route::get('/tenants/table', 'Api\TableController@show');
+Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function(){
 
-Route::get('/tenants/category', 'Api\CategoryController@show');
-Route::get('/tenants/categories', 'Api\CategoryController@getCategoriesByTenant');
+    Route::group(['namespace' => 'Auth', 'middleware' => 'auth:sanctum'], function(){
+        Route::post('/logout', 'AuthClientController@logout');
+        Route::post('/me', 'AuthClientController@me');
+    });
 
-Route::get('/tenants', 'Api\TenantController@index');
-Route::get('/tenant/{uuid}', 'Api\TenantController@show');
+    Route::group(['middleware' => 'auth:sanctum'], function(){
+        Route::post('/order/evaluation/create', 'OrderEvaluationController@store');
+
+        Route::post('/auth/order/create', 'OrderController@store');
+        Route::get('/auth/orders', 'OrderController@getClientAuthenticatedOrders');
+    });
+
+    Route::get('/order', 'OrderController@show');
+    Route::post('/order/create', 'OrderController@store');
+
+    Route::post('/sanctum/token', 'Auth\AuthClientController@auth');
+    Route::post('/client/create', 'Auth\RegisterController@store');
+
+    Route::any('/tenants/products', 'ProductController@getProductsByTenantUuid');
+    Route::get('/product', 'ProductController@show');
+
+    Route::get('/tenants/tables', 'TableController@getTablesByTenantUuid');
+    Route::get('/table', 'TableController@show');
+
+    Route::get('/tenants/categories', 'CategoryController@getCategoriesByTenant');
+    Route::get('/category', 'CategoryController@show');
+
+    Route::get('/tenants', 'TenantController@index');
+    Route::get('/tenant', 'TenantController@show');
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

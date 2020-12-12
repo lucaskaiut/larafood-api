@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\TenantFormRequest;
 use App\Http\Resources\TenantResource;
 use App\Services\TenantService;
 use Illuminate\Http\Request;
@@ -25,9 +26,9 @@ class TenantController extends Controller
         return TenantResource::collection($tenants);
     }
 
-    public function show($uuid)
+    public function show(TenantFormRequest $request)
     {
-        if(!$tenant = $this->tenantService->getTenantByUuid($uuid))
+        if(!$tenant = $this->tenantService->getTenantByUuid($request->company_token))
             return response()->json(['message' => 'Not Found'], 404);
 
         return new TenantResource($tenant);
