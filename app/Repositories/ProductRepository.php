@@ -18,8 +18,8 @@ class ProductRepository implements ProductRepositoryInterface
     {
         $products = $this->entity
                         ->join('tenants', 'tenants.id', '=', 'products.tenant_id')
-                        ->join('category_product', 'category_product.product_id', '=', 'products.id')
-                        ->join('categories', 'category_product.category_id', '=', 'categories.id')
+                        ->leftJoin('category_product', 'category_product.product_id', '=', 'products.id')
+                        ->leftJoin('categories', 'category_product.category_id', '=', 'categories.id')
                         ->where('tenants.uuid', $uuid)
                         ->where(function($query) use ($categories) {
                             if(!empty($categories))
