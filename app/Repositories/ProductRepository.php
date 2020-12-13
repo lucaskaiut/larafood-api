@@ -26,6 +26,7 @@ class ProductRepository implements ProductRepositoryInterface
                             $query->whereIn('categories.url', $categories);
                         })
                         ->select('products.*')
+                        ->distinct('products.id')
                         ->get();
 
         return $products;
