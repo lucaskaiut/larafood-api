@@ -9,4 +9,6 @@ interface CategoryRepositoryInterface
     public function getCategoriesByTenantId(int $tenantId);
 
     public function getCategoryByUuid(string $uuid);
+
+    public function getCategoriesGrouped();
 }
