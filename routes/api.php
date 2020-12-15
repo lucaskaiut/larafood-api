@@ -18,7 +18,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function(){
 
     Route::group(['namespace' => 'Auth', 'middleware' => 'auth:sanctum'], function(){
         Route::post('/logout', 'AuthClientController@logout');
-        Route::post('/me', 'AuthClientController@me');
+        Route::get('/me', 'AuthClientController@me');
     });
 
     Route::group(['middleware' => 'auth:sanctum'], function(){
