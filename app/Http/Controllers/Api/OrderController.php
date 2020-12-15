@@ -25,7 +25,7 @@ class OrderController extends Controller
         return new OrderResource($order);
     }
 
-    public function show(TenantFormRequest $request)
+    public function show(Request $request)
     {
         if(!$request->identify)
             return response()->json(['message' => 'The order identify is required'], 400);

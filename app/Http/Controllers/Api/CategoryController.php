@@ -29,4 +29,9 @@ class CategoryController extends Controller
     {
         return new CategoryResource($this->categoryService->getCategoryByUuid($request->uuid));
     }
+
+    public function getCategoriesGrouped()
+    {
+        return CategoryResource::collection($this->categoryService->getCategoriesGrouped());
+    }
 }
