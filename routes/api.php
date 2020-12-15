@@ -34,12 +34,14 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function(){
     Route::post('/sanctum/token', 'Auth\AuthClientController@auth');
     Route::post('/client/create', 'Auth\RegisterController@store');
 
+    Route::any('/products', 'ProductController@getAllProducts');
     Route::any('/tenants/products', 'ProductController@getProductsByTenantUuid');
     Route::get('/product', 'ProductController@show');
 
     Route::get('/tenants/tables', 'TableController@getTablesByTenantUuid');
     Route::get('/table', 'TableController@show');
 
+    Route::get('/categories', 'CategoryController@getCategoriesGrouped');
     Route::get('/tenants/categories', 'CategoryController@getCategoriesByTenant');
     Route::get('/category', 'CategoryController@show');
 

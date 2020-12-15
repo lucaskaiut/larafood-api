@@ -33,4 +33,8 @@ class CategoryRepository implements CategoryRepositoryInterface
         return $this->entity->where('uuid', $uuid)->first();
     }
 
+    public function getCategoriesGrouped()
+    {
+        return $this->entity->groupBy('url')->get();
+    }
 }

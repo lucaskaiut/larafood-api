@@ -26,4 +26,11 @@ class ProductService
 
         return $product;
     }
+
+    public function getAllProducts(array $categories)
+    {
+        $products = $this->repository->getAllProducts($categories);
+
+        return $products;
+    }
 }

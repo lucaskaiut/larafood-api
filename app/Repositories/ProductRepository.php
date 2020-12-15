@@ -38,4 +38,19 @@ class ProductRepository implements ProductRepositoryInterface
 
         return $product;
     }
+
+    public function getAllProducts(array $categories)
+    {
+        $products = $this->entity
+            ->leftJoin('category_product', 'category_product.product_id', '=', 'products.id')
+            ->leftJoin('categories', 'category_product.category_id', '=', 'categories.id')
+            ->where(function($query) use ($categories) {
+                if(!empty($categories))
+                    $query->whereIn('categories.url', $categories);
+            })
+            ->select('products.*')
+            ->get();
+
+        return $products;
+    }
 }

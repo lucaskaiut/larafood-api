@@ -25,4 +25,9 @@ class CategoryService
     {
         return $this->categoryRepository->getCategoryByUuid($uuid);
     }
+
+    public function getCategoriesGrouped()
+    {
+        return $this->categoryRepository->getCategoriesGrouped();
+    }
 }

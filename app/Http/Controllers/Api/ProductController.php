@@ -31,4 +31,11 @@ class ProductController extends Controller
 
         return new ProductResource($product);
     }
+
+    public function getAllProducts(Request $request)
+    {
+        $products = $this->service->getAllProducts($request->categories);
+
+        return ProductResource::collection($products);
+    }
 }
