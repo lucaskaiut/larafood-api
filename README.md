@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## About LaraFood-API
+Larafood is a API project planed and developed by [EspecializaTI]('https://especializati.com.br'). This repository belongs to Lucas Kaiut and was used to lear more about Laravel API development.
+
+There is a project that uses this API, you can find it [here]('https://github.com/lucaskaiut/vuefood.git').
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
