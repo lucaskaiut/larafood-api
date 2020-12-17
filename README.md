@@ -12,6 +12,10 @@ Larafood is a API project planed and developed by [EspecializaTI]('https://espec
 
 There is a project that uses this API, you can find it [here]('https://github.com/lucaskaiut/vuefood.git').
 
+## API EndPoints
+
+This documentation will be available soon
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
