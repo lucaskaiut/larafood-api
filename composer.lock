@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a514513a704fc7258e96df127fa9d3d7",
+    "content-hash": "d042623eb754dba87dbefb0b21bfb7e0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -63,59 +63,6 @@
             "time": "2020-10-29T16:03:21+00:00"
         },
         {
-            "name": "bacon/bacon-qr-code",
-            "version": "2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Bacon/BaconQrCode.git",
-                "reference": "3e9d791b67d0a2912922b7b7c7312f4b37af41e4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/3e9d791b67d0a2912922b7b7c7312f4b37af41e4",
-                "reference": "3e9d791b67d0a2912922b7b7c7312f4b37af41e4",
-                "shasum": ""
-            },
-            "require": {
-                "dasprid/enum": "^1.0.3",
-                "ext-iconv": "*",
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "phly/keep-a-changelog": "^1.4",
-                "phpunit/phpunit": "^7 | ^8 | ^9",
-                "squizlabs/php_codesniffer": "^3.4"
-            },
-            "suggest": {
-                "ext-imagick": "to generate QR code images"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "BaconQrCode\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Scholzen 'DASPRiD'",
-                    "email": "mail@dasprids.de",
-                    "homepage": "https://dasprids.de/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "BaconQrCode is a QR code generator for PHP.",
-            "homepage": "https://github.com/Bacon/BaconQrCode",
-            "support": {
-                "issues": "https://github.com/Bacon/BaconQrCode/issues",
-                "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.3"
-            },
-            "time": "2020-10-30T02:02:47+00:00"
-        },
-        {
             "name": "brick/math",
             "version": "0.9.1",
             "source": {
@@ -170,53 +117,6 @@
                 }
             ],
             "time": "2020-08-18T23:57:15+00:00"
-        },
-        {
-            "name": "dasprid/enum",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DASPRiD/Enum.git",
-                "reference": "5abf82f213618696dda8e3bf6f64dd042d8542b2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/5abf82f213618696dda8e3bf6f64dd042d8542b2",
-                "reference": "5abf82f213618696dda8e3bf6f64dd042d8542b2",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7 | ^8 | ^9",
-                "squizlabs/php_codesniffer": "^3.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DASPRiD\\Enum\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Scholzen 'DASPRiD'",
-                    "email": "mail@dasprids.de",
-                    "homepage": "https://dasprids.de/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP 7.1 enum implementation",
-            "keywords": [
-                "enum",
-                "map"
-            ],
-            "support": {
-                "issues": "https://github.com/DASPRiD/Enum/issues",
-                "source": "https://github.com/DASPRiD/Enum/tree/1.0.3"
-            },
-            "time": "2020-10-02T16:03:48+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1393,16 +1293,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "9be3b16c877d477357c015cec057548cf9b2a14a"
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/9be3b16c877d477357c015cec057548cf9b2a14a",
-                "reference": "9be3b16c877d477357c015cec057548cf9b2a14a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
                 "shasum": ""
             },
             "require": {
@@ -1418,7 +1318,6 @@
                 "phpunit/phpunit": "^8.5.8"
             },
             "suggest": {
-                "ext-fileinfo": "Required for MimeType",
                 "ext-ftp": "Allows you to use FTP server storage",
                 "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
@@ -1476,7 +1375,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/1.x"
+                "source": "https://github.com/thephpleague/flysystem/tree/1.1.4"
             },
             "funding": [
                 {
@@ -1484,20 +1383,20 @@
                     "type": "other"
                 }
             ],
-            "time": "2020-08-23T07:39:11+00:00"
+            "time": "2021-06-23T21:56:05+00:00"
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.5.1",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa"
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/353f66d7555d8a90781f6f5e7091932f9a4250aa",
-                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
                 "shasum": ""
             },
             "require": {
@@ -1505,8 +1404,9 @@
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.36",
-                "phpunit/phpunit": "^8.5.8"
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpstan/phpstan": "^0.12.68",
+                "phpunit/phpunit": "^8.5.8 || ^9.3"
             },
             "type": "library",
             "autoload": {
@@ -1527,7 +1427,7 @@
             "description": "Mime-type detection for Flysystem",
             "support": {
                 "issues": "https://github.com/thephpleague/mime-type-detection/issues",
-                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.5.1"
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.7.0"
             },
             "funding": [
                 {
@@ -1539,7 +1439,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-18T11:50:25+00:00"
+            "time": "2021-01-18T20:58:21+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2738,74 +2638,6 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
-        },
-        {
-            "name": "simplesoftwareio/simple-qrcode",
-            "version": "4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SimpleSoftwareIO/simple-qrcode.git",
-                "reference": "3b721089cc541f6c37f0a41b90377529af977948"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SimpleSoftwareIO/simple-qrcode/zipball/3b721089cc541f6c37f0a41b90377529af977948",
-                "reference": "3b721089cc541f6c37f0a41b90377529af977948",
-                "shasum": ""
-            },
-            "require": {
-                "bacon/bacon-qr-code": "^2.0",
-                "ext-gd": "*",
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "mockery/mockery": "~1",
-                "phpunit/phpunit": "~9"
-            },
-            "suggest": {
-                "ext-imagick": "Allows the generation of PNG QrCodes.",
-                "illuminate/support": "Allows for use within Laravel."
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "SimpleSoftwareIO\\QrCode\\QrCodeServiceProvider"
-                    ],
-                    "aliases": {
-                        "QrCode": "SimpleSoftwareIO\\QrCode\\Facades\\QrCode"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SimpleSoftwareIO\\QrCode\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Simple Software LLC",
-                    "email": "support@simplesoftware.io"
-                }
-            ],
-            "description": "Simple QrCode is a QR code generator made for Laravel.",
-            "homepage": "http://www.simplesoftware.io",
-            "keywords": [
-                "Simple",
-                "generator",
-                "laravel",
-                "qrcode",
-                "wrapper"
-            ],
-            "support": {
-                "issues": "https://github.com/SimpleSoftwareIO/simple-qrcode/issues",
-                "source": "https://github.com/SimpleSoftwareIO/simple-qrcode/tree/4.1.0"
-            },
-            "time": "2020-10-06T22:51:06+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7742,5 +7574,5 @@
         "php": "^7.2.5|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
